@@ -14,7 +14,6 @@ Course Outline
 
 Week 1
 ------
-
 * Review of probability theory and probability distributions.
 * Historical background.
 * Definition and basic properties of Shannon entropy (e.g., non-negativity).
@@ -34,13 +33,12 @@ Week 3
 
 Week 4
 ------
-* Infinitesimal KL divergence and the Fisher metric
-* Jeffreys priors
+* Infinitesimal KL divergence and the Fisher metric.
+* Jeffreys priors.
 
 
 Week 5
 ------
-
 * Markov chains and entropy rates.
 * Asymptotic equipartition property.
 
@@ -62,7 +60,6 @@ Week 7
 
 Week 8
 ------
-
 * The principle of maximum entropy.
 * Updating probabilities with maximum entropy.
 * Canonical distributions.
@@ -71,7 +68,6 @@ Week 8
 
 Week 9
 ------
-
 * Statistical mechanics.
 * Liouville's theorem.
 * The second law of thermodynamics.
@@ -79,14 +75,12 @@ Week 9
 
 Week 10
 -------
-
 * Lossy compression and distortion measures.
 * Rate-distortion function and its interpretation.
 * Trade‑offs between fidelity and compression.
 
 Week 11
 -------
-
 * Applications in modern statistics and machine learning.
 * Variational inference and ELBO.
 * Bayesian experimental design.
@@ -95,7 +89,6 @@ Week 11
 
 Week 12
 -------
-
 * Foundations of probability: ordering of statements.
 * Foundations of entropy: ordering of questions.
 * Summary and unifying themes.
