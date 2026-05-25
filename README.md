@@ -90,6 +90,7 @@ Week 11
 * Applications in modern statistics and machine learning.
 * Variational inference and ELBO.
 * Bayesian experimental design.
+* Logarithmic scoring rules.
 
 
 Week 12
