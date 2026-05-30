@@ -66,12 +66,12 @@
 \node[lattice node] (d) at (3,2)  {$d$};
 
 % Level 2: 2-element joins (6 nodes, perfectly symmetric)
-\node[lattice node] (ab) at (-5,4) {$a \vee b$};
-\node[lattice node] (ac) at (-3,4) {$a \vee c$};
-\node[lattice node] (ad) at (-1,4) {$a \vee d$};
-\node[lattice node] (bc) at (1,4)  {$b \vee c$};
-\node[lattice node] (bd) at (3,4)  {$b \vee d$};
-\node[lattice node] (cd) at (5,4)  {$c \vee d$};
+\node[lattice node] (ab) at (-4.0,4) {$a \vee b$};
+\node[lattice node] (ac) at (-2.4,4) {$a \vee c$};
+\node[lattice node] (ad) at (-0.8,4) {$a \vee d$};
+\node[lattice node] (bc) at (0.8,4)  {$b \vee c$};
+\node[lattice node] (bd) at (2.4,4)  {$b \vee d$};
+\node[lattice node] (cd) at (4.0,4)  {$c \vee d$};
 
 % Level 3: 3-element joins (4 nodes)
 \node[lattice node] (abc) at (-3,6) {$a \vee b \vee c$};
@@ -129,6 +129,56 @@
 \draw (bcd) -- (top);
 
 \end{tikzpicture}
+
+
+
+
+%%%%%%%%%%%
+Three-atom case with some uniform probabilities:
+\begin{tikzpicture}[scale=1.2]
+
+\tikzset{
+  lattice node/.style={
+    inner sep=2pt,
+    outer sep=2pt,
+  }
+}
+
+% Level 0
+\node[lattice node] (bot) at (0,0) {$0$};
+
+% Level 1 (shifted up more)
+\node[lattice node] (a) at (-2,2) {$\frac{1}{3}$};
+\node[lattice node] (b) at (0,2)  {$\frac{1}{3}$};
+\node[lattice node] (c) at (2,2)  {$\frac{1}{3}$};
+
+% Level 2 (more vertical spacing)
+\node[lattice node] (ab) at (-2,4) {$\frac{1}{6}$};
+\node[lattice node] (ac) at (0,4)  {$\frac{1}{6}$};
+\node[lattice node] (bc) at (2,4)  {$\frac{1}{6}$};
+
+% Level 3 (top element higher still)
+\node[lattice node] (top) at (0,6) {$1$};
+
+% Edges
+\draw (bot) -- (a);
+\draw (bot) -- (b);
+\draw (bot) -- (c);
+
+\draw (a) -- (ab);
+\draw (a) -- (ac);
+\draw (b) -- (ab);
+\draw (b) -- (bc);
+\draw (c) -- (ac);
+\draw (c) -- (bc);
+
+\draw (ab) -- (top);
+\draw (ac) -- (top);
+\draw (bc) -- (top);
+
+\end{tikzpicture}
+
+
 
 
 \end{document}
