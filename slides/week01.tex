@@ -26,6 +26,8 @@
 % Palette (top bar on title slide)
 \setbeamercolor{palette primary}{bg=mTomato, fg=white}
 
+\newcommand{\given}{\,|\,}
+
 \title{Information Theory}
 \author{Brendon J. Brewer}
 %\date{\today}
@@ -44,6 +46,68 @@ profound truths.
 \begin{frame}{Why Information Theory?}
 ``But you remember this. When you control the mail, you control... information.''
 --- Newman
+\end{frame}
+
+
+\begin{frame}{Probability Theory}
+Information theory is built upon probability theory, like an extra `layer'
+that is automatically present whenever you use probabilities.
+In the first week, we will spend some time revising probability theory.
+\end{frame}
+
+
+\begin{frame}{Probability Theory: Sum and Product Rules}
+The sum rule of probabilities is
+\begin{align}
+P(A \vee B \given C) &= P(A \given C) + P(B \given C) - P(A, B \given C).
+\end{align}
+
+\pause
+
+Here, $A$, $B$, and $C$ are any three statements or propositions.
+The vertical bar means `given'. The $\vee$ means `logical OR'.
+The comma means `logical AND'.
+
+\pause
+
+Throughout the equation, $C$ is the background context.
+
+\end{frame}
+
+
+
+\begin{frame}{Probability Theory: Sum and Product Rules}
+The product rule of probabilities is
+\begin{align}
+P(A, B \given C) &= P(A \given C)P(B \given A, C).
+\end{align}
+
+\pause
+
+You might be used to calling $A$, $B$ and $C$ {\em events}, defined as subsets
+of the {\em sample space}. The logical OR becomes set union $\cup$,
+and the logical AND becomes set intersection $\cap$. You are welcome to use
+that terminology and notation, but it is not my preference.
+
+\end{frame}
+
+
+\begin{frame}{Probability Theory: Sum and Product Rules}
+If $A$ and $B$ are mutually exclusive (given $C$), the sum rule simplifies
+to
+\begin{align}
+P(A \vee B \given C) &= P(A \given C) + P(B \given C).
+\end{align}
+
+\pause
+
+If $A$ and $B$ are independent (given $C$), the product rule simplifies to
+
+\begin{align}
+P(A, B \given C) &= P(A \given C)P(B \given C).
+\end{align}
+
+
 \end{frame}
 
 
