@@ -26,7 +26,13 @@
 % Palette (top bar on title slide)
 \setbeamercolor{palette primary}{bg=mTomato, fg=white}
 
+\addtobeamertemplate{block alerted begin}{}{\vspace{0.5em}}
+\addtobeamertemplate{block example begin}{}{\vspace{0.5em}}
+\addtobeamertemplate{block begin}{}{\vspace{0.5em}}
+
+
 \newcommand{\given}{\,|\,}
+\usepackage{hyperref}
 
 \title{Information Theory}
 \author{Brendon J. Brewer}
@@ -112,23 +118,159 @@ P(A, B \given C) &= P(A \given C)P(B \given C).
 
 
 
-\begin{frame}{Exercise: }
-If $A$ and $B$ are mutually exclusive (given $C$), the sum rule simplifies
-to
-\begin{align}
-P(A \vee B \given C) &= P(A \given C) + P(B \given C).
-\end{align}
+\begin{frame}{Probability}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+What are probabilities? For simplicity, let's consider a very simple
+example.
 
-\pause
-
-If $A$ and $B$ are independent (given $C$), the product rule simplifies to
-
-\begin{align}
-P(A, B \given C) &= P(A \given C)P(B \given C).
-\end{align}
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{0.3\textwidth}
+\includegraphics[scale=0.1]{figures/apple.jpg}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[scale=0.1]{figures/bananas.jpg}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[scale=0.1]{figures/cherries.jpg}
+\end{minipage}
+\caption{{\footnotesize Fruit.}
+\par
+\vspace{1em}
+{\tiny
+\url{https://commons.wikimedia.org/wiki/File:Honeycrisp.jpg}
+(Attribution: Jonathunder)
+\url{https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg} (Attribution:
+Augustus Binu)
+\url{https://commons.wikimedia.org/wiki/File:Cherry_Stella444.jpg} (Attribution: Benjamint444, edited by Fir0002)
+} % \tiny
+\label{fig:fruit}}
+\end{figure}
 
 
 \end{frame}
+
+
+
+
+
+
+
+\begin{frame}
+\begin{exampleblock}{Context --- Fruit Example I}
+A large shipping container contains some fruit --- apples, bananas, and
+cherries. Suppose that 20\% of the pieces of fruit are apples, 10\% are
+bananas, and 70\% are cherries.
+\end{exampleblock}\pause
+
+\begin{block}{Question}
+What proportion of the pieces of fruit are either apples or cherries?
+\end{block}
+
+\end{frame}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Probability}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{block}{Question}
+What proportion of the pieces of fruit are either apples or cherries?
+\end{block}\pause
+
+\begin{exampleblock}{Solution (common sense!)}
+(proportion that are either apples or cherries) = \\
+\quad(proportion that are apples) + 
+     (proportion that are cherries)
+\end{exampleblock}\pause
+
+\begin{exampleblock}{Solution (mathematics notation!)}
+\vspace{-1em}
+\begin{align}
+P(A \vee C) &= P(A) + P(C) \\
+            &= 0.2 + 0.7   \\
+            &= 0.9. 
+\end{align}
+\end{exampleblock}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Probability}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Let's now consider a different problem.\pause
+
+\begin{exampleblock}{Context --- Fruit Example II}
+I have a single piece of fruit in my bag, and you know it is
+either an apple, a banana, or a cherry.
+Suppose you are 20\% certain that it is an apple, 10\% certain
+that it is a banana, and 70\% certain that it is a cherry.
+\end{exampleblock}\pause
+
+\begin{block}{Question}
+How certain are you that it is either an apple or a cherry?
+\end{block}
+
+\end{frame}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\begin{frame}{Probability}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{block}{Question}
+How certain are you that it is either an apple or a cherry?
+\end{block}\pause
+
+\begin{exampleblock}{Solution (common sense!)}
+(certainty that it is an apple or cherry) = \\
+\quad(certainty that it is an apple) + 
+     (certainty that it is a cherry)
+\end{exampleblock}\pause
+
+\begin{exampleblock}{Solution (mathematics notation!)}
+\vspace{-1em}
+\begin{align}
+P(A \vee C) &= P(A) + P(C) \\
+            &= 0.2 + 0.7   \\
+            &= 0.9. 
+\end{align}
+\end{exampleblock}\pause
+
+Look familiar?
+\end{frame}
+
+
+\begin{frame}{Probability}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We just saw that two {\bf very different problems} could be solved by
+applying {\bf exactly the same mathematics}. That mathematics was
+actually the {\bf sum rule of probability theory}.\pause
+
+The first example was about the relative `sizes' of sets and
+subsets.\pause
+
+The second example was about reasoning when there is some
+uncertainty involved.
+
+\end{frame}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}{Probability}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The first example was about the relative `sizes' of sets and
+subsets. \pause 
+\begin{exampleblock}{Sizes of sets and subsets}
+Classical or `frequentist' methods apply probability theory
+on problems like this {\bf only} (though one can stretch the
+imagination to make many problems seem like this).
+\end{exampleblock}\pause
+
+The second example was about reasoning when there is some
+uncertainty involved. When probabilities are used this way,
+it is called `Bayesian'. We will mostly adopt this interpretation
+throughout the course.
+
+\end{frame}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document}
