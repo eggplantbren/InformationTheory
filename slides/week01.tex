@@ -33,6 +33,11 @@
 
 \newcommand{\given}{\,|\,}
 \usepackage{hyperref}
+\usepackage{appendixnumberbeamer}
+\setbeamertemplate{footline}{
+  \hfill\insertframenumber/\inserttotalframenumber\hspace{1em}
+}
+
 
 \title{Information Theory}
 \author{Brendon J. Brewer}
@@ -259,11 +264,10 @@ uncertainty involved.
 \begin{frame}{Probability}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The first example was about the relative `sizes' of sets and
 subsets. \pause 
-\begin{exampleblock}{Sizes of sets and subsets}
+
 Classical or `frequentist' methods apply probability theory
 on problems like this {\bf only} (though one can stretch the
-imagination to make many problems seem like this).
-\end{exampleblock}\pause
+imagination to make many problems seem like this).\pause
 
 The second example was about reasoning when there is some
 uncertainty involved. When probabilities are used this way,
