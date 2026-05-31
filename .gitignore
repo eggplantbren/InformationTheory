@@ -5,3 +5,6 @@
 *.pdf
 *.snm
 *.toc
+slides/figures/*.pdf
+slides/*printable.tex
+__pycache__

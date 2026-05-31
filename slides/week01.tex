@@ -361,5 +361,137 @@ We will hardly ever use these.
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Joint, Marginal, and Conditional Distributions}
+% TODO: Write this
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Historical Background}
+TODO: Historical Background
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Entropy}
+The fundamental new quantity introduced in information theory
+is called the {\bf entropy} or the {\bf Shannon entropy}.
+You may have heard of it in physics,
+and there is a relationship which we will explore later in the
+course. The definition is
+\begin{align}
+H(x) &= -\sum p(x) \log p(x).
+\end{align}
+\pause
+
+{\bf Note}: Always remember the minus sign. Later, we will
+see some similar quantities that are defined without the minus
+sign. Try to keep it straight!
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Entropy}
+The entropy is written as a function of $x$, but it's not
+a function of the actual value of $x$, but rather of the
+probability distribution that has been assigned to $x$.\pause
+
+Entropy is commonly said to describe the {\bf amount of uncertainty} in the probability distribution.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Entropy: Special cases}
+Two special cases, which are very easy to prove
+(you should do it as an exercise),
+will help us build up intuition about entropy.
+\pause
+\begin{enumerate}
+\item[(i)] If $x$ is known, i.e., there is a single
+possible value that has probability 1, then $H(x) = 0$. \pause
+\item[(ii)] If $x$ has a discrete uniform distribution,
+i.e., there are $N$ possibilities with probability $1/N$ each,
+then the entropy is $\log(N)$.
+\end{enumerate}
+\pause
+
+{\bf Note}: We get to choose the base of the logarithm.
+If we choose base 2, the units of entropy are {\bf bits}.
+If we choose the natural logarithm (base $e$), the units
+are {\bf nats}.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Entropy: Examples of Distributions}
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{figures/entropy1.pdf}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Entropy: Examples of Distributions}
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{figures/entropy2.pdf}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Entropy: Examples of Distributions}
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{figures/entropy3.pdf}
+\end{center}
+
+{\bf Important}: Unlike standard deviation and variance,
+entropy does not care what the {\em values} of the possibilities
+are. It only cares about how many possibilities there are,
+and what the probabilities are.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Entropy for Continuous Distributions}
+Let $x$ be unknown with a probability density function $p(x)$.
+The Shannon entropy may still be defined, as
+\begin{align}
+H(x) &= -\int p(x) \log p(x) \, dx.
+\end{align}
+\pause
+Sometimes people call this the `differential entropy'.
+It basically works the same as in the discrete case,
+but with some change to the interpretation.
+\end{frame}
+
+\begin{frame}
+\frametitle{Entropy (Continuous Version): Special cases}
+\begin{enumerate}
+\item[(i)] If $x$ has a continuous uniform distribution,
+i.e., there is a region of possibilities with volume $V$
+and the density is $1/V$,
+then the entropy is $\log(V)$.
+\item[(ii)] If $x$ is known and has a Dirac delta function
+$\delta(x - x_{\rm true})$ as its PDF,
+the entropy is $-\infty$.
+\end{enumerate}
+\pause
+
+{\bf Note I}: In the continuous case, entropy can be negative.
+It's just because volumes can be less than 1.\\
+{\bf Note II}: Under transformations of the parameter space,
+e.g., $x' = h(x)$, continuous entropy is not invariant.
+As with volumes, Jacobian factors get involved.
+\end{frame}
+
+
+
 \end{document}
 

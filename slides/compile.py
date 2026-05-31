@@ -1,3 +1,4 @@
+from figures import *
 import subprocess
 
 def cleanup():
