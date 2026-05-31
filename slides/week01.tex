@@ -277,5 +277,89 @@ throughout the course.
 \end{frame}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{frame}{Probability Distributions}
+Probability is usually used after defining a hypothesis space
+(traditionally called a sample space), which is a set of mutually
+exclusive and exhaustive `atomic' propositions. For example,
+if $x$ is either 1, 2, or 3, we have three propositions,
+and their probabilities are given by a probability mass
+function $p(x)$, where $p(i) = P(x = i)$.\pause
+
+This is a `discrete random variable' formally, though we won't
+use that terminology much. A random variable just means
+that a probability distribution has been defined.
+\end{frame}
+
+\begin{frame}{Sum and Product Rules: Example}
+Suppose $x$ is either 1, 2, or 3, with probabilities
+$(0.2, 0.1, 0.7)$ respectively. Find:
+\begin{enumerate}
+\item[(a)] $P(x \geq 2)$.
+\item[(b)] $P(x = 2 \given x \geq 2)$.
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Continuous Probability Distributions}
+Continuous probability distributions may also be defined
+by a probability density function $p(x)$. Probabilities
+are obtained via the sum rule which becomes an integral:
+
+\begin{align}
+P(x \in A) &= \int_A p(x) \, dx.
+\end{align}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Integration $\leftrightarrow$ Summation Duality}
+In most cases, if we have an equation that involves a summation symbol
+for the discrete case ($\sum$), the equivalent equation for the continuous
+case involves an integral ($\int$).
+Informally, we can say
+\begin{align}
+\sum \equiv \int
+\end{align}\pause
+When writing general things that apply to both, we can choose either the
+summation symbol or the integration symbol, and once we have a real context,
+we will know which one it is.
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Expected Values}
+For an unknown quantity $x$ with probability distribution $p(x)$,
+the expectation is
+\begin{align}
+E(x) &= \sum x p(x).
+\end{align}
+The sum is over all possible values. \pause
+More generally, we have
+\begin{align}
+E(g(x)) &= \sum g(x) p(x).
+\end{align}\pause
+\pause
+In general, in this course, integration or summation without
+any specified limits means integration or summation over the
+whole domain (known from the context).
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Variance and Standard Deviation}
+Variance and standard deviation are defined by
+
+\begin{align}
+\textnormal{Var}(x) &= \sum \left(x - E(x)\right)^2 p(x) \\
+\textnormal{sd}(x) &= \sqrt{\textnormal{Var}(x)}.
+\end{align}
+
+\pause
+We will hardly ever use these.
+
+\end{frame}
+
+
 \end{document}
 
